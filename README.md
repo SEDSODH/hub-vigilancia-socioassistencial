@@ -3,7 +3,7 @@
 **COOVIG / SEDSODH — Governo do Estado do Rio de Janeiro**
 
 [![Licença: CC BY-SA 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY--SA%204.0-brightgreen)](./LICENSE)
-[![Deploy](https://github.com/SEDSODH/vigilancia-socioassistencial/actions/workflows/deploy.yml/badge.svg)](https://github.com/SEDSODH/vigilancia-socioassistencial/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/SEDSODH/hub-vigilancia-socioassistencial/actions/workflows/deploy.yml/badge.svg)](https://github.com/SEDSODH/hub-vigilancia-socioassistencial/actions/workflows/deploy.yml)
 [![Astro](https://img.shields.io/badge/Astro-6.x-BC52EE?logo=astro)](https://astro.build)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
 
@@ -19,7 +19,7 @@ A **Coordenação Estadual de Vigilância Socioassistencial (COOVIG)** integra a
 
 ## Acesso
 
-👉 **[sedsodh.github.io/vigilancia-socioassistencial](https://sedsodh.github.io/vigilancia-socioassistencial/)**
+👉 **[sedsodh.github.io/hub-vigilancia-socioassistencial](https://sedsodh.github.io/hub-vigilancia-socioassistencial/)**
 
 ---
 
@@ -53,8 +53,8 @@ Site estático de página única com lazy loading:
 ## Executar localmente
 
 ```bash
-git clone https://github.com/SEDSODH/vigilancia-socioassistencial.git
-cd vigilancia-socioassistencial
+git clone https://github.com/SEDSODH/hub-vigilancia-socioassistencial.git
+cd hub-vigilancia-socioassistencial
 npm install
 npm run dev
 ```

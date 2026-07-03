@@ -2,7 +2,7 @@ export const SITE = {
   titulo: 'Vigilância Socioassistencial',
   subtitulo: 'COOVIG / SEDSODH — Governo do Estado do Rio de Janeiro',
   descricao: 'Hub institucional da Coordenação Estadual de Vigilância Socioassistencial. Centraliza normativos, materiais técnicos, capacitações e contatos para as equipes municipais do Rio de Janeiro.',
-  url: 'https://sedsodh.github.io/vigilancia-socioassistencial/',
+  url: 'https://sedsodh.github.io/hub-vigilancia-socioassistencial/',
 }
 
 export const COLORS = {

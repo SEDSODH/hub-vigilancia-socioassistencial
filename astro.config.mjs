@@ -3,7 +3,7 @@ import react from '@astrojs/react'
 
 export default defineConfig({
   site: 'https://sedsodh.github.io',
-  base: '/vigilancia-socioassistencial/',
+  base: '/hub-vigilancia-socioassistencial/',
   integrations: [
     react(),
   ],
