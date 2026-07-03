@@ -18,33 +18,45 @@ sistemasSuas.forEach(s => {
   <p class="text-slate-500 dark:text-slate-400 mb-8 max-w-3xl">
     Manuais, formulários e guias de preenchimento dos sistemas oficiais do SUAS utilizados no dia a dia da Vigilância Socioassistencial.
   </p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-on-scroll stagger">
+  <div class="space-y-3">
     {[...porSistema.entries()].map(([sistema, itens]) => (
-      <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-5 hover:shadow-lg transition-all duration-300">
-        <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-2">{sistema}</h3>
-        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
-          {sistema === 'Prontuário Eletrônico SUAS' ? 'Documentação e materiais de apoio para o Prontuário Eletrônico do SUAS.' : ''}
-          {sistema === 'RMA' ? 'Manuais e formulários do Registro Mensal de Atendimento (RMA) para CRAS, CREAS e Centro POP.' : ''}
-          {sistema === 'CNEAS' ? 'Guias e questionários do Cadastro Nacional de Entidades de Assistência Social.' : ''}
-          {sistema === 'SAA' ? 'Materiais de referência do Sistema de Atendimento ao Assistido.' : ''}
-          {sistema === 'SISC' ? 'Manual do Sistema de Informação sobre a Situação da Criança e do Adolescente.' : ''}
-          {sistema === 'CadSUAS' ? 'Manual de utilização do Cadastro Nacional do SUAS.' : ''}
-          {sistema === 'Estrutura SUAS' ? 'Guias e manuais do sistema Estrutura SUAS (antigo SIGTV).' : ''}
-        </p>
-        <div class="space-y-2">
-          {itens.map(item => (
-            <PdfViewerModal
-              client:visible
-              titulo={item.titulo}
-              descricao={item.descricao}
-              pdfUrl={`${base}/${item.url.replace(/^\/+/, '')}`}
-              tipo={item.tipo}
-              data={item.data}
-              tags={item.tags}
-            />
-          ))}
+      <details class="group border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors list-none select-none">
+          <div class="flex items-center gap-3">
+            <span class="text-lg font-bold text-slate-800 dark:text-white">{sistema}</span>
+            <span class="text-xs text-slate-400 dark:text-slate-500">
+              {itens.length} {itens.length === 1 ? 'documento' : 'documentos'}
+            </span>
+          </div>
+          <svg class="w-5 h-5 text-slate-400 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-5 pb-5 pt-1">
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+            {sistema === 'Prontuário Eletrônico SUAS' ? 'Documentação e materiais de apoio para o Prontuário Eletrônico do SUAS.' : ''}
+            {sistema === 'RMA' ? 'Manuais e formulários do Registro Mensal de Atendimento (RMA) para CRAS, CREAS e Centro POP.' : ''}
+            {sistema === 'CNEAS' ? 'Guias e questionários do Cadastro Nacional de Entidades de Assistência Social.' : ''}
+            {sistema === 'SAA' ? 'Materiais de referência do Sistema de Atendimento ao Assistido.' : ''}
+            {sistema === 'SISC' ? 'Manual do Sistema de Informação sobre a Situação da Criança e do Adolescente.' : ''}
+            {sistema === 'CadSUAS' ? 'Manual de utilização do Cadastro Nacional do SUAS.' : ''}
+            {sistema === 'Estrutura SUAS' ? 'Guias e manuais do sistema Estrutura SUAS (antigo SIGTV).' : ''}
+          </p>
+          <div class="space-y-2">
+            {itens.map(item => (
+              <PdfViewerModal
+                client:visible
+                titulo={item.titulo}
+                descricao={item.descricao}
+                pdfUrl={`${base}/${item.url.replace(/^\/+/, '')}`}
+                tipo={item.tipo}
+                data={item.data}
+                tags={item.tags}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </details>
     ))}
   </div>
 </Section>
