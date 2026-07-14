@@ -8,3 +8,4 @@ dist/
 !.env.example
 .omo/
 .codegraph/
+.reasonix/
