@@ -156,7 +156,6 @@ export default function SitePreviewModal({ url, titulo }: SitePreviewModalProps)
                     loading="lazy"
                     onLoad={() => setIframeLoaded(true)}
                   />
-                  <div className="absolute inset-0 z-20" aria-hidden="true" />
                 </>
               )}
             </div>
